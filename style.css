@@ -1,0 +1,394 @@
+:root{
+    --limegreen:hsl(163, 72%, 41%);
+    --brightred:hsl(356, 69%, 56%);
+    --facebook:hsl(208, 92%, 53%);
+    --twitter:hsl(203, 89%, 53%);
+    --instagram:linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
+    --youtube:hsl(348, 97%, 39%);
+    --verydarkblue:hsl(230, 17%, 14%);
+    --verydarkbluetop:hsl(232, 19%, 15%);
+    --darkblue:hsl(228, 28%, 20%);
+    --desaturatedblue: hsl(228, 34%, 66%);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+*{
+    margin:0;
+    padding: 0;
+}
+html{
+    font-family: 'Inter', sans-serif;
+}
+body{
+    background-color: var(--verydarkblue);
+}
+.header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:1em 280px ;
+margin-right: auto;
+margin-left: auto;
+color:white;
+font-weight:700;
+}
+
+
+.header p{
+color:var(--desaturatedblue);
+font-size:14px;
+}
+
+.header-card-section{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 1.5em;
+    row-gap: 1.8em;
+    margin-top:1em;
+    margin-right: auto;
+    margin-left: auto;
+    padding:1em 280px ;
+}
+
+.card{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    row-gap: 1em;
+    border-radius: 0.5em;
+    background-color:var(--darkblue);
+    text-align: center;
+    transition: all .2s linear;
+    padding: 3em 2.2em 1.5em;
+}
+
+.card:hover{
+    cursor: pointer;
+    background-color:hsl(226, 18%, 29%);
+}
+
+.card:nth-child(1){
+    border-top: 5px solid var(--facebook);
+}
+.card:nth-child(2){
+    border-top: 5px solid var(--twitter);
+}
+.card:nth-child(3) {
+    position: relative;
+    border-top: 5px solid transparent;
+    border-radius: 0 0 5px 5px;
+    margin-top: 5px; }
+    .card:nth-child(3):before {
+      content: '';
+      position: absolute;
+      height: 5px;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: -1;
+      margin: -10px 0 0 0;
+      border-radius: 5px 5px 0 0;
+      background: linear-gradient(45deg, #fdc468, #df4996); }
+.card:nth-child(4){
+    border-top: 5px solid var(--youtube);
+}
+.header-card{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+    margin:-15px 0 15px;
+    color:var(--desaturatedblue);
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.header-card span{
+    margin:0 5px;
+}
+
+.body-card > h1{
+    color:white;
+    font-size:3.5em;
+    
+}
+
+.body-card > p {
+    letter-spacing: 3px;
+    color:var(--desaturatedblue);
+    font-weight: 400;
+}
+
+.footer-card{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    margin:1em 0;
+   
+}
+
+.footer-card span{
+    margin:0 5px ;
+    color:var(--limegreen);
+    font-weight: 700;
+}
+
+.card:nth-child(4) .footer-card span{
+    color:var(--brightred);
+}
+
+/* OVERVIEW SECTION */
+
+.overview-title{
+    margin-top:1em;
+    margin-right: auto;
+    margin-left: auto;
+    padding:1em 285px ;
+    font-weight: 700;
+    color:white;
+}
+
+.card-section{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1.5em;
+    row-gap: 1.8em;
+    margin-right: auto;
+    margin-left: auto;
+    padding:1em 280px ;
+    font-weight: 700;
+}
+
+.card-overview{
+    background-color:var(--darkblue);
+    border-radius: 0.5em;
+    transition: all .2s linear;
+    
+}
+.card-overview:hover{
+    cursor: pointer;
+    background-color:hsl(226, 18%, 29%);
+}
+.header-card-overview span{
+color:var(--desaturatedblue);
+}
+
+.card-overview .header-card-overview{
+    display:flex;
+    justify-content: space-between;
+    padding:2em;
+    
+}
+.card-overview .body-card-overview{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:1em 2em 1.5em;
+    color:white;
+}
+.card-overview .rate{
+    display: flex;
+    align-items: center;
+    gap:.3em;
+}
+
+.card-overview h1{
+    font-size:2em;
+}
+.card-overview .body-card-overview span{
+    color:var(--limegreen);
+}
+.card-overview:nth-child(2) .body-card-overview:nth-child(2) span,.card-overview:nth-child(7) .body-card-overview:nth-child(2) span,.card-overview:nth-child(8) .body-card-overview:nth-child(2) span{
+    color: var(--brightred);
+}
+
+.bck-div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 45vh;
+    width: 100%;
+    background-color: var(--verydarkbluetop);
+    z-index: -1;
+  }
+.toggle-container{
+    display:flex;
+    align-items:center;
+    gap:.5em;
+}
+.toggle-container p {
+    color:white;
+}
+  .toggle {
+    cursor: pointer;
+    display: inline-block; }
+  .toggle-switch {
+    display: inline-block;
+    background: linear-gradient(45deg, #378fe6, #3eda82);
+    border-radius: 16px;
+    width: 58px;
+    height: 32px;
+    position: relative;
+    vertical-align: middle;
+    transition: background 0.25s; }
+    .toggle-switch:before, .toggle-switch:after {
+      content: ""; }
+    .toggle-switch:before {
+      display: block;
+      background: var(--verydarkbluetop);
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      transition: left 0.25s; }
+    .toggle:hover .toggle-switch:before {
+      background: var(--verydarkblue); }
+    .toggle-checkbox:checked + .toggle-switch {
+      background: #aeb3cb; }
+    .toggle-checkbox:checked + .text {
+      color: red; }
+      .toggle-checkbox:checked + .toggle-switch:before {
+        left: 30px; }
+  
+  .toggle-checkbox {
+    position: absolute;
+    visibility: hidden; }
+/* LIGHT MODE */
+.light{
+    background-color:hsl(0, 0%, 100%);
+}
+.light .bck-div{
+    background-color: hsl(225, 100%, 98%);
+}
+.light .header{
+    background-color:hsl(225, 100%, 98%);
+    transition: all .3s ease;
+    color:hsl(230, 17%, 14%);
+}
+.header.light p{
+    color:hsl(228, 12%, 44%);
+   
+}
+
+.switchbtn.light > label{
+    color:hsl(228, 12%, 44%);
+}
+
+.light .card{
+background-color:hsl(227, 47%, 96%);
+transition: all .3s ease;
+}
+.light .card:nth-child(1){
+background-color:hsl(227, 47%, 96%);
+transition: all .3s ease;
+}
+.light .card:nth-child(2){
+background-color:hsl(227, 47%, 96%);
+transition: all .45s ease;
+}
+.light .card:nth-child(3){
+background-color:hsl(227, 47%, 96%);
+transition: all .6s ease;
+}
+.light .card:nth-child(4){
+background-color:hsl(227, 47%, 96%);
+transition: all .75s ease;
+}
+.light .card-overview:nth-child(1){
+background-color:hsl(227, 47%, 96%);
+
+}
+.light .card-overview:nth-child(2){
+background-color:hsl(227, 47%, 96%);
+transition: all .5s ease;
+}
+.light .card-overview:nth-child(3){
+background-color:hsl(227, 47%, 96%);
+transition: all 1s ease;
+}
+.light .card-overview:nth-child(4){
+background-color:hsl(227, 47%, 96%);
+transition: all 1.5s ease;
+}
+.light .card-overview:nth-child(5){
+background-color:hsl(227, 47%, 96%);
+
+}
+.light .card-overview:nth-child(6){
+background-color:hsl(227, 47%, 96%);
+transition: all .5s ease;
+}
+.light .card-overview:nth-child(7){
+background-color:hsl(227, 47%, 96%);
+transition: all 1s ease;
+}
+.light .card-overview:nth-child(8){
+background-color:hsl(227, 47%, 96%);
+transition: all 1.5s ease;
+}
+.light .text{
+    color:hsl(228, 12%, 44%);
+}
+.light .card p {
+    color:hsl(228, 12%, 44%);
+}
+.light .card span {
+    color:hsl(228, 12%, 44%);
+}
+.light .card h1 {
+    color:hsl(230, 17%, 14%)
+}
+.light .card-overview{
+background-color:hsl(227, 47%, 96%);
+}
+
+.light .card-overview p {
+    color:hsl(228, 12%, 44%);
+}
+.light .card-overview span {
+    color:hsl(228, 12%, 44%);
+}
+.light .card-overview h1 {
+    color:hsl(230, 17%, 14%)
+}
+.light  .overviewh1 {
+    color:hsl(228, 12%, 44%);
+}
+
+/* RESPONSIVE */
+@media screen and (max-width:768px){
+    .header{
+        display:block;
+        width:100%;
+        padding:0;
+    }
+    .title-section{
+        padding:1em;
+        border-bottom:2px solid var(--darkblue)
+    }
+    .light .title-section{
+        border-bottom:2px solid rgba(138, 133, 133, 0.735);
+    }
+    .toggle-container{
+        display:flex;
+        justify-content:space-between;
+        padding:.5em 1em;
+    }
+    .header-card-section{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        padding:1em;
+    }
+    .overview-title{
+        margin:0 1em;
+        padding:0;
+    }
+    .card-section{
+        display:flex;
+        flex-direction: column;
+        padding:1em;
+    }
+}
